@@ -3,16 +3,20 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:mydb
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
+    url: jdbc:postgresql://127.0.0.1:5433/Spring
+    username: postgres
+    password: 1
   jpa:
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+          time_zone: GMT+4
   flyway:
-    enabled: false
-    user: sa
-    password: password
-    schemas: mydb
-    url: jdbc:h2:mem:mydb
-    locations: filesystem:db/migration
+    enabled: true
+    url: jdbc:postgresql://127.0.0.1:5433/Spring
+    user: postgres
+    password: 1
