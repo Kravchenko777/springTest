@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8083
 
 spring:
   datasource:
@@ -20,3 +20,6 @@ spring:
     url: jdbc:postgresql://127.0.0.1:5433/Spring
     user: postgres
     password: 1
+  graphql:
+    graphiql:
+      enabled: false

@@ -1,0 +1,20 @@
+type UserEntity {
+    uniqueId: ID!,
+    isDeleted: Boolean,
+    isRelevant: Boolean,
+    name: String
+}
+
+type UserLocal {
+    id: ID!,
+    name: String
+}
+
+type Query {
+    userscount:Int
+    userbyid(id: ID):UserEntity
+    userFirst:UserLocal
+}
+type Mutation {
+    createVehicle(name: String):UserEntity
+}

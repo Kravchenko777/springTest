@@ -1,0 +1,9 @@
+query {
+    userbyid(id: 3)
+    {
+        uniqueId,
+        name,
+        isDeleted
+    }
+}
+
