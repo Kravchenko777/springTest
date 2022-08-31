@@ -13,12 +13,12 @@ import java.io.IOException;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT )
 public class GraphQlMyTest {
 
-    @Autowired
+   /* @Autowired
     GraphQLTestTemplate graphQLTestTemplate;
 
     @Test
     void test() throws IOException {
         GraphQLResponse graphQLResponse = graphQLTestTemplate.perform("graphql/user.graphql");
         System.out.println(graphQLResponse.getStatusCode());
-    }
+    }*/
 }

@@ -23,3 +23,7 @@ spring:
   graphql:
     graphiql:
       enabled: false
+  security:
+    user:
+      name: max
+      password: max
