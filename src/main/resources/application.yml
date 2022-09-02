@@ -27,3 +27,6 @@ spring:
     user:
       name: max
       password: $2a$12$miagI3mdnhH07H3Iiu9jEurC/5wgIbpQxNL4TCG26U5sIZgH.iCSa
+logging:
+  level:
+    root: TRACE

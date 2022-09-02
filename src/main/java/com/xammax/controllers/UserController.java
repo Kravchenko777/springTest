@@ -1,7 +1,10 @@
 package com.xammax.controllers;
 
+import com.xammax.local.TestAOP;
 import com.xammax.local.UserLocal;
 import com.xammax.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,6 +15,9 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/user")
 public class UserController {
 
+
+    Logger logger = LoggerFactory.getLogger(UserController.class);
+
     private UserRepository userRepository;
 
     UserController(UserRepository userRepository){
@@ -19,7 +25,10 @@ public class UserController {
     }
 
     @GetMapping("/list")
+    @TestAOP
     public List<UserLocal> getUsersList(){
+        logger.error("Ошибка");
+        logger.debug("Дебаг");
         return userRepository.findAllBy().stream().map(UserLocal::new).collect(Collectors.toList());
 
     }
