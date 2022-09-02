@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 public class UserController {
 
     private UserRepository userRepository;
@@ -24,7 +24,7 @@ public class UserController {
 
     }
 
-    @GetMapping("/user")
+    @GetMapping("/getuser")
     public UserLocal getUserById(@RequestParam Long id){
 
         return new UserLocal();
