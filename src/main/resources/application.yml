@@ -25,8 +25,13 @@ spring:
       enabled: false
   security:
     user:
-      name: max
-      password: $2a$12$miagI3mdnhH07H3Iiu9jEurC/5wgIbpQxNL4TCG26U5sIZgH.iCSa
+      name: 1
+      password: 1
+  rabbitmq:
+    host: 10.100.10.248
+    port: 5672
+    username: guest
+    password: guest
 logging:
   level:
-    root: TRACE
+    root: INFO

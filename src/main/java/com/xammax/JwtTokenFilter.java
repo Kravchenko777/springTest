@@ -20,7 +20,7 @@ import java.util.List;
 
 import static org.springframework.util.ObjectUtils.isEmpty;
 
-@Component
+//@Component
 public class JwtTokenFilter extends OncePerRequestFilter {
 
     @Autowired

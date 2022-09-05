@@ -24,14 +24,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import static java.lang.String.format;
 
-@EnableWebSecurity
+//@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private JwtTokenFilter jwtTokenFilter;
+  /*  @Autowired
+    private JwtTokenFilter jwtTokenFilter;*/
 
 /*    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
